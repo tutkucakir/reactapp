@@ -25,7 +25,6 @@ class App extends Component {
       <Router>
         <div className="container">
         <Navbar title='User App'/>
-        <hr/>
         <Routes>
             <Route path='/' element={<Users />}/>
             <Route path='add' element={<AddUser />}/>
