@@ -1,3 +1,11 @@
+# Örnek React Projesi
+Udemy'den Mustafa Murat COŞKUN tarafından gerçekleştirilen eğitimde ele alınan projenin kaynak kodları günümüzdeki versiyonlarla uyumlu olarak kodlanmıştır.
+
+Projede Kişi ve Maaş bilgisinin yer aldığı Rest API de kullanılmıştır. API için json-server kullanılmıştır.
+Json Server'ı çalıştırmak için:  json-server --watch api/db.json --port 3004
+
+Diğer eklentiler import kısımlarında yer almaktadır.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
