@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Navbar from './components/Navbar';
+import AddUser from './components/AddUser';
+import Users from './components/Users';
 import './App.css';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import NotFound from './pages/NotFound';
+import Contribute from './pages/Contribute';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Home = () => {
+  return(
+    <h3>Home Page</h3>
+  )
+}
+
+const About = () => {
+  return(
+    <h3>About Page</h3>
+  )
+}
+
+class App extends Component {
+  render() {    
+    return (
+      <Router>
+        <div className="container">
+        <Navbar title='User App'/>
+        <hr/>
+        <Routes>
+            <Route path='/' element={<Users />}/>
+            <Route path='add' element={<AddUser />}/>
+            <Route path='projectfiles' element={<Contribute />}/>
+            <Route path='*' exact={true} element={<NotFound />} />
+        </Routes>
+
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
