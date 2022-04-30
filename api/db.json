@@ -14,15 +14,9 @@
     },
     {
       "name": "Tutku ÇAKIR",
-      "department": "IT",
       "salary": "10000",
+      "department": "IT",
       "id": "70bzZgJ"
-    },
-    {
-      "name": "Ahmet Şerif Çakır",
-      "department": "Temizlik",
-      "salary": "3000",
-      "id": "0QO13mM"
     }
   ]
 }

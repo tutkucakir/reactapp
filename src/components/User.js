@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import UserConsumer from '../context';
 import axios from 'axios';
-//rcc yazarak tab ile oluşturabiliriz
+import {Link} from 'react-router-dom'
 
 class User extends Component {
     state = {
@@ -66,7 +66,7 @@ class User extends Component {
 
   render() {      
       //Destructiong
-      const{name,department,salary}=this.props;
+      const{id,name,department,salary}=this.props;
       const{isVisible}=this.state;
       return(
           <UserConsumer>
@@ -84,7 +84,8 @@ class User extends Component {
                                   isVisible?
                                   <div className='card-body'>
                                   <p className='card-text'>Maaş: {salary}</p>
-                                  <p className='card-text'>Departman: {department}</p>                
+                                  <p className='card-text'>Departman: {department}</p>        
+                                  <Link to={`edit/${id}`} className="btn btn-sm btn-dark btn-block">Edit User Data</Link>        
                                   </div>:null
                               }
                             </div>

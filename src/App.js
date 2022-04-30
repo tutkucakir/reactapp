@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from './layout/Navbar';
-import AddUser from './components/AddUser';
+import AddUser from './forms/AddUser';
 import Users from './components/Users';
+import UpdateUser from './forms/UpdateUser';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import NotFound from './pages/NotFound';
@@ -29,6 +30,7 @@ class App extends Component {
             <Route path='/' element={<Users />}/>
             <Route path='add' element={<AddUser />}/>
             <Route path='projectfiles' element={<Contribute />}/>
+            <Route path='edit/:id' element={<UpdateUser />} />
             <Route path='*' exact={true} element={<NotFound />} />
         </Routes>
 
